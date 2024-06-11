@@ -14,7 +14,7 @@ spec:
       - name: GIT_BRANCH
         value: "main"
       - name: ARTIFACT_BUCKET
-        value: "getting-started20240610210044198100000001"
+        value: "getting-started20240611185034473200000001"
       - name: APPLICATION_NAME
       - name: ROLE_NAME
       - name: BUCKET_NAME
