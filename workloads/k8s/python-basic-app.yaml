@@ -15,18 +15,18 @@ spec:
         namespace: python-basic-app
         replicaCount: 1
         image:
-          repository: 054678736585.dkr.ecr.us-west-2.amazonaws.com/python-basic-app
-          tag: "dev-hjdgs"
+          repository: 397284317422.dkr.ecr.us-east-1.amazonaws.com/python-basic-app
+          tag: "1"
           pullPolicy: IfNotPresent
         service:
           type: ClusterIP
           port: 80
         env:
-          S3_BUCKET_NAME: 'python-basic-app-bucket-dhsgds'
+          S3_BUCKET_NAME: 'python-basic-app-bucket-shkakdas'
         serviceAccount:
           create: true
           name: python-basic-app
-          iamRoleArn: 'arn:aws:iam::054678736585:role/python-basic-app-role'
+          iamRoleArn: 'arn:aws:iam::397284317422:role/python-basic-app-role'
   destination:
     name: "in-cluster"
     namespace: python-basic-app
