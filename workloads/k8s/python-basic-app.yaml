@@ -16,7 +16,7 @@ spec:
         replicaCount: 1
         image:
           repository: 054678736585.dkr.ecr.us-west-2.amazonaws.com/python-basic-app
-          tag: "1"
+          tag: "dev-hjdgs"
           pullPolicy: IfNotPresent
         service:
           type: ClusterIP
