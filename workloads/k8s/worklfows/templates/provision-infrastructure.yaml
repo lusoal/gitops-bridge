@@ -14,7 +14,7 @@ spec:
       - name: GIT_BRANCH
         value: "main"
       - name: ARTIFACT_BUCKET
-        value: "getting-started20240611185034473200000001"
+        value: "getting-started20240610210044198100000001"
       - name: APPLICATION_NAME
       - name: ROLE_NAME
       - name: BUCKET_NAME
@@ -47,7 +47,7 @@ spec:
           - name: REPO_URL
           - name: GIT_BRANCH
       container:
-        image: "397284317422.dkr.ecr.us-east-1.amazonaws.com/argo-workflows-internal:1"
+        image: "054678736585.dkr.ecr.us-west-2.amazonaws.com/argo-workflows-internal:3"
         command: ["/bin/sh", "-c"]
         args: ["./01-clone-repository.sh '{{inputs.parameters.REPO_URL}}' '{{inputs.parameters.GIT_BRANCH}}'"]
         volumeMounts:
@@ -61,7 +61,7 @@ spec:
           - name: BUCKET_NAME
           - name: ARTIFACT_BUCKET
       container:
-        image: "397284317422.dkr.ecr.us-east-1.amazonaws.com/argo-workflows-internal:1"
+        image: "054678736585.dkr.ecr.us-west-2.amazonaws.com/argo-workflows-internal:3"
         command: ["/bin/sh", "-c"]
         args: ["./02-apply-terraform.sh '{{inputs.parameters.APPLICATION_NAME}}' '{{inputs.parameters.ROLE_NAME}}' '{{inputs.parameters.BUCKET_NAME}}' '{{inputs.parameters.ARTIFACT_BUCKET}}'"]
         volumeMounts:
