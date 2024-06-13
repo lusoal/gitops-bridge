@@ -15,7 +15,7 @@ spec:
         namespace: python-basic-app
         replicaCount: 1
         image:
-          repository: 397284317422.dkr.ecr.us-east-1.amazonaws.com/python-basic-app
+          repository: 054678736585.dkr.ecr.us-west-2.amazonaws.com/python-basic-app
           tag: "1"
           pullPolicy: IfNotPresent
         service:
@@ -26,7 +26,7 @@ spec:
         serviceAccount:
           create: true
           name: python-basic-app
-          iamRoleArn: 'arn:aws:iam::397284317422:role/python-basic-app-role'
+          iamRoleArn: 'arn:aws:iam::054678736585:role/python-basic-app-role'
   destination:
     name: "in-cluster"
     namespace: python-basic-app
